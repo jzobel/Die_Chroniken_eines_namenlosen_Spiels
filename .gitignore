@@ -4,5 +4,12 @@
 !/Debug/GFX
 !/Debug/SFX
 !/Debug/SCRIPTS
+
+#/Debug_UNIX
+#!/Debug_UNIX/*.CFG
+#!/Debug_UNIX/GFX/
+#!/Debug_UNIX/SFX/
+#!/Debug_UNIX/SCRIPTS/
+
 /Doc/html
 *Thumbs.db

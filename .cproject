@@ -127,7 +127,7 @@
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168">
-			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168" moduleId="org.eclipse.cdt.core.settings" name="Debug UNIX">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168" moduleId="org.eclipse.cdt.core.settings" name="Debug_UNIX">
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -139,18 +139,19 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="is klar" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168" name="Debug UNIX" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
+				<configuration artifactExtension="" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="is klar" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168" name="Debug_UNIX" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.2056185033" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.gnu.platform.base.1054921952" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
-							<builder buildPath="${workspace_loc:/Die_Chroniken_eines_namenlosen_Spiels/Debug UNIX}" id="cdt.managedbuild.target.gnu.builder.base.1347478191" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base"/>
+							<builder arguments="-j4" buildPath="${workspace_loc:/Die_Chroniken_eines_namenlosen_Spiels/Debug UNIX}" command="make" id="cdt.managedbuild.target.gnu.builder.base.1347478191" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.base.2146096394" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.1319956995" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
+							<tool command="g++" id="cdt.managedbuild.tool.gnu.cpp.compiler.base.1319956995" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
 								<option id="gnu.cpp.compiler.option.include.paths.2032841162" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="home/odonata/Projects/.workspace/Spiel_lib/irrlicht-1.8.1/include"/>
-									<listOptionValue builtIn="false" value="home/odonata/Projects/.workspace/Spiel_lib/irrKlang-1.4.0/include"/>
-									<listOptionValue builtIn="false" value="home/odonata/Projects/.workspace/Spiel_lib/irrlicht-1.8.1/source/Irrlicht"/>
-									<listOptionValue builtIn="false" value="usr/include/lua5.2"/>
+									<listOptionValue builtIn="false" value="/home/odonata/Projects/.workspace/Spiel_lib/irrlicht-1.8.1/include"/>
+									<listOptionValue builtIn="false" value="/home/odonata/Projects/.workspace/Spiel_lib/irrlicht-1.8.1/source/Irrlicht"/>
+									<listOptionValue builtIn="false" value="/home/odonata/Projects/.workspace/Spiel_lib/irrKlang-64bit-1.5.0/include"/>
+									<listOptionValue builtIn="false" value="/usr/include/lua5.2"/>
+									<listOptionValue builtIn="false" value="/usr/include/x86_64-linux-gnu"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.4332016" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="_DEBUG_MODE=1"/>
@@ -158,25 +159,31 @@
 								</option>
 								<option id="gnu.cpp.compiler.option.optimization.level.2134349760" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.debugging.level.2064158176" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.other.other.1125066193" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1222039485" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.1456503039" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.1921632685" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.1537007995" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.misc.other.2079680754" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1699518577" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.base.887793272" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.2012261701" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base">
 								<option id="gnu.cpp.link.option.libs.727945883" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="Irrlicht"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="irrKlang"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="Lua52"/>
+									<listOptionValue builtIn="false" value="Irrlicht"/>
+									<listOptionValue builtIn="false" value="pthread"/>
+									<listOptionValue builtIn="false" value="IrrKlang"/>
+									<listOptionValue builtIn="false" value="lua5.2"/>
+									<listOptionValue builtIn="false" value="stdc++"/>
+									<listOptionValue builtIn="false" value="dl"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.400322138" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="home/odonata/Projects/.workspace/Spiel_lib/irrlicht-1.8.1/lib/Linux"/>
-									<listOptionValue builtIn="false" value="usr/bin"/>
-									<listOptionValue builtIn="false" value="home/odonata/Projects/.workspace/Spiel_lib/irrKlang-1.4.0/bin/linux-gcc"/>
+									<listOptionValue builtIn="false" value="/home/odonata/Projects/.workspace/Spiel_lib/irrlicht-1.8.1/lib/Linux"/>
+									<listOptionValue builtIn="false" value="/usr/bin"/>
+									<listOptionValue builtIn="false" value="/home/odonata/Projects/.workspace/Spiel_lib/irrKlang-64bit-1.5.0/bin/linux-gcc-64"/>
 								</option>
+								<option id="gnu.cpp.link.option.flags.115875445" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1219919151" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -222,11 +229,11 @@
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168;cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1319956995;cdt.managedbuild.tool.gnu.cpp.compiler.input.1222039485">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168;cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168.;cdt.managedbuild.tool.gnu.c.compiler.base.1456503039;cdt.managedbuild.tool.gnu.c.compiler.input.1699518577">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
-		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1595395523;cdt.managedbuild.config.gnu.mingw.exe.release.1595395523.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.1435374985;cdt.managedbuild.tool.gnu.cpp.compiler.input.584718543">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168;cdt.managedbuild.config.gnu.mingw.exe.debug.1581144702.1256429168.;cdt.managedbuild.tool.gnu.c.compiler.base.1456503039;cdt.managedbuild.tool.gnu.c.compiler.input.1699518577">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1595395523;cdt.managedbuild.config.gnu.mingw.exe.release.1595395523.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.1976224758;cdt.managedbuild.tool.gnu.c.compiler.input.1991696297">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
