@@ -37,19 +37,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: Die_Chroniken_eines_namenlosen_Spiels.exe
+all: Die_Chroniken_eines_namenlosen_Spiels
 
 # Tool invocations
-Die_Chroniken_eines_namenlosen_Spiels.exe: $(OBJS) $(USER_OBJS)
+Die_Chroniken_eines_namenlosen_Spiels: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"C:\Users\dixx\Projekte\Ressourcen\Irrklang\irrKlang-1.4.0\lib\Win32-gcc" -Lhome/odonata/Projects/.workspace/Spiel_lib/irrlicht-1.8.1/lib/Linux -Lusr/bin -o "Die_Chroniken_eines_namenlosen_Spiels.exe" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L/home/odonata/Projects/.workspace/Spiel_lib/irrlicht-1.8.1/lib/Linux -L/usr/bin -L/home/odonata/Projects/.workspace/Spiel_lib/irrKlang-64bit-1.5.0/bin/linux-gcc-64 -o "Die_Chroniken_eines_namenlosen_Spiels" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) Die_Chroniken_eines_namenlosen_Spiels.exe
+	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) Die_Chroniken_eines_namenlosen_Spiels
 	-@echo ' '
 
 .PHONY: all clean dependents

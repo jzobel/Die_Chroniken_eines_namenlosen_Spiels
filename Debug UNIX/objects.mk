@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lIrrlicht -lirrKlang -lLua52
+LIBS := -lIrrlicht -lpthread -lIrrKlang -llua5.2 -lstdc++ -ldl
 
