@@ -7,21 +7,12 @@
 
 
 
-BasicStaticObject::BasicStaticObject(
-        const core::stringc& objectData,
-        scene::ISceneManager* smgr,
-        bool isParent
-)
-: Basic3DObject(objectData, smgr, true),
-  node_(0),
-  nextStep_(VEC_3DF_NULL)
+BasicStaticObject::BasicStaticObject( const core::stringc& objectData, scene::ISceneManager* smgr, bool isParent )
+: Basic3DObject( objectData, smgr, true ),
+  node_(0)
 {
     if ( smgr_ == 0 )
-    {
-        Logfile::getInstance().emergencyExit(
-                "SceneManager in [BasicStaticObject] nicht mehr gefunden! Abbruch."
-        );
-    }
+        Logfile::getInstance().emergencyExit( "SceneManager in [BasicStaticObject] nicht mehr gefunden! Abbruch." );
     init();
     if ( !isParent )
         deleteExtractor();
@@ -65,7 +56,7 @@ scene::ISceneNode* BasicStaticObject::nodeInterface() const
 
 const core::vector3df& BasicStaticObject::getNextStep() const
 {
-    return nextStep_;
+    return VEC_3DF_NULL;
 }
 
 
@@ -93,11 +84,9 @@ scene::IMesh* BasicStaticObject::loadMesh()
         }
         else
         {
-            GenericHelperMethods::getInstance().validateFileExistence(
-                    meshFileName );
+            GenericHelperMethods::getInstance().validateFileExistence( meshFileName );
             scene::IMesh* dummyMesh = smgr_->getMesh( meshFileName );
-            mesh = smgr_->getMeshManipulator()->createMeshCopy(
-                    dummyMesh ); // TODO test if you can remove this part!
+            mesh = smgr_->getMeshManipulator()->createMeshCopy( dummyMesh ); // TODO test if you can remove this part!
             smgr_->getMeshCache()->removeMesh( dummyMesh );
         }
     }
@@ -134,7 +123,7 @@ void BasicStaticObject::init()
                 smgr_,
                 ObjectManager::getInstance().getBaseIdByType( type_ )
         );
-        dummyMesh->drop();
+        dummyMesh->drop(); // mesh is still grabbed by node_
         node_->setName( name_ );
         node_->setRotation( loadRotation() );
         node_->setPosition( loadPosition() );
