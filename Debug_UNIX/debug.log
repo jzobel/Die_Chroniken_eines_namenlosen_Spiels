@@ -10,9 +10,13 @@ Sound-Entchen erfolgreich erstellt.
     Version: IrrKlang 1.4.0
     Treiber: ALSA, Multi-Fred
 [debug] Anzahl eingelesener Maus-Einzelbilder: 9
-10 Kartenteile in 127ms erstellt.
+10 Kartenteile in 128ms erstellt.
 [debug] TerrainMinY: 0.000000
 [debug] TerrainMaxY: 0.000000
 [debug] Welt erstellt.
-[debug] 11 statische Objekte in 154ms erstellt.
+[debug] 11 statische Objekte in 147ms erstellt.
 [debug] 3 NPCs in 24ms erstellt.
+
+'Die Chroniken eines namenlosen Spiels' wurde normal beendet.
+Sound-Entchen normal beendet.
+Script-VM normal beendet.
