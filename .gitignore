@@ -1,15 +1,16 @@
-/Debug/
-!/Debug/*.dll
-!/Debug/*.CFG
-!/Debug/GFX
-!/Debug/SFX
-!/Debug/SCRIPTS
+Debug_UNIX/*
+!Debug_UNIX/GFX/
+!Debug_UNIX/SFX/
+!Debug_UNIX/SCRIPTS/
 
-./Debug_UNIX/
-!./Debug_UNIX/*.CFG
-!./Debug_UNIX/GFX/
-!./Debug_UNIX/SFX/
-!./Debug_UNIX/SCRIPTS/
+Debug/*
+!/Debug/*.dll
+!/Debug/GFX/
+!/Debug/SFX/
+!/Debug/SCRIPTS/
+
+debug.log
+CONFIG.CFG
 
 /Doc/html
 *Thumbs.db
