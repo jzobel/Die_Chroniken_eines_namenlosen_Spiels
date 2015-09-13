@@ -37,7 +37,7 @@ public:
      */
     void start( const f32 frameDeltaTime );
 
-    /*! \brief Aktualisiert die Shutdown-Phase Status.
+    /*! \brief Aktualisiert die Shutdown-Phase des Status.
      *  \param frameDeltaTime (\a const \a f32) Dauer des letzten Frames in Sekunden
      *  \return -
      */

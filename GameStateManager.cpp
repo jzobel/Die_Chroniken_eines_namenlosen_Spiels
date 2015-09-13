@@ -5,6 +5,7 @@
 #include "StateStartup.h"
 #include "StateUnloadGameContent.h"
 #include "StateMainMenu.h"
+#include "StatePauseTheGame.h"
 
 
 
@@ -81,6 +82,9 @@ void GameStateManager::requestNewState( State desiredState )
         case UNLOAD:
             validateRequestForUnload();
             break;
+        case PAUSE:
+            validateRequestForPause();
+            break;
         case SHUTDOWN:
             requestedState_ = SHUTDOWN;  // Anfrage von SHUTDOWN ist immer zulässig.
             break;
@@ -141,6 +145,9 @@ void GameStateManager::switchState()
             break;
         case UNLOAD:
             currentState_ = new StateUnloadGameContent( device_ );
+            break;
+        case PAUSE:
+            currentState_ = new StatePauseTheGame( device_ );
             break;
         default: // SHUTDOWN
             device_->closeDevice(); // TODO create GameState Shutdown later
@@ -222,6 +229,21 @@ void GameStateManager::validateRequestForUnload()
             break;
         default:
             Logfile::getInstance().emergencyExit( "Unzulässige Anforderung von GameState UNLOAD! Abbruch." );
+            break;
+    }
+}
+
+
+
+void GameStateManager::validateRequestForPause()
+{
+    switch ( runningState_ )
+    {
+        case GAME:
+            requestedState_ = PAUSE;
+            break;
+        default:
+            Logfile::getInstance().emergencyExit( "Unzulässige Anforderung von GameState PAUSE! Abbruch." );
             break;
     }
 }

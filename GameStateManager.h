@@ -35,6 +35,7 @@ public:
         GAME,         //!< Das Spiel selbst
         UNLOAD,       //!< Entlädt das Spiel
         SHUTDOWN,     //!< Herunterfahren des Spiels
+        PAUSE,        //!< Pausiert das Spiel und zeigt ein Wahlmenü an
 
         STATES_COUNT  //!< Anzahl verfügbarer Spiel-Stati
 	};
@@ -96,6 +97,7 @@ private:
     void validateRequestForLoad();
     void validateRequestForGame();
     void validateRequestForUnload();
+    void validateRequestForPause();
     inline void unknownStateRequested();
 
 };
