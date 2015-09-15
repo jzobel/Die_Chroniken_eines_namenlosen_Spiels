@@ -57,7 +57,7 @@ void StatePauseTheGame::shutdown( f32 frameDeltaTime )
 void StatePauseTheGame::draw()
 {
     //u32 x = device_->getTimer()->getRealTime();
-    device_->getVideoDriver()->beginScene( true, true, COL_BLACK );
+    device_->getVideoDriver()->beginScene( true, true, COL_GREEN );
     device_->getSceneManager()->drawAll();
     device_->getGUIEnvironment()->drawAll();
     Mauspfeil::getInstance().draw();
@@ -93,6 +93,8 @@ void StatePauseTheGame::transitTo( internalState state )
             break;
         case STOPPING:
             currentInternalState_ = STOPPING;
+            Eventreceiver::getInstance().setEventReactionActive( false, false, false );
+            Mauspfeil::getInstance().setCurrentArrow( Mauspfeil::MAUSPFEIL_UNSICHTBAR );
             break;
         default:
             currentInternalState_ = STOPPED;

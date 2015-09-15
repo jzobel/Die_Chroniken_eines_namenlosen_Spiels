@@ -51,6 +51,11 @@ void StatePlayTheGame::update( f32 frameDeltaTime )
         GameStateManager::getInstance().requestNewState( GameStateManager::UNLOAD );
         transitTo( STOPPING );
     }
+    if ( Eventreceiver::getInstance().hasKeyJustBeenPressedDown( KEY_KEY_P ) )
+    {
+        GameStateManager::getInstance().requestNewState( GameStateManager::PAUSE );
+        transitTo( STOPPING );
+    }
 #ifdef _DEBUG_MODE
     if ( Eventreceiver::getInstance().hasKeyJustBeenPressedDown( KEY_F1 ) )
         Debugwindow::getInstance().toggle();
@@ -121,6 +126,8 @@ void StatePlayTheGame::transitTo( internalState state )
             break;
         case STOPPING:
             currentInternalState_ = STOPPING;
+            Eventreceiver::getInstance().setEventReactionActive( false, false, false );
+            Mauspfeil::getInstance().setCurrentArrow( Mauspfeil::MAUSPFEIL_UNSICHTBAR );
             break;
         default:
             currentInternalState_ = STOPPED;

@@ -212,6 +212,9 @@ void GameStateManager::validateRequestForGame()
         case LOAD:
             requestedState_ = GAME;
             break;
+        case PAUSE:
+            requestedState_ = GAME;
+            break;
         default:
             Logfile::getInstance().emergencyExit( "Unzulässige Anforderung von GameState GAME! Abbruch." );
             break;
