@@ -30,10 +30,10 @@ public:
 
     /*! \brief Erhöht den Timer um bestimmten Wert (in Sekunden).
      *  \attention Muss nicht aufgerufen werden, wenn der Timer von TimerManager verwaltet wird!
-     *  \param frameDeltaTime (\a const \a f32) Wert in Sekunden
+     *  \param seconds (\a const \a f32) Wert in Sekunden
      *  \return \a Timer* Zeiger auf sich selbst
      */
-    Timer* tick( const f32 frameDeltaTime );
+    Timer* tick( const f32 seconds );
 
     /*! \brief Startet den Timer bei null.
      *  \param -

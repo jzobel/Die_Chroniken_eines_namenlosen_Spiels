@@ -20,9 +20,9 @@ Timer::~Timer()
 
 
 
-Timer* Timer::tick( const f32 frameDeltaTime )
+Timer* Timer::tick( const f32 seconds )
 {
-    currentValue_ += frameDeltaTime;
+    currentValue_ += seconds;
     return this;
 }
 
