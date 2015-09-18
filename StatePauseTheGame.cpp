@@ -4,6 +4,7 @@
 #include "GameStateManager.h"
 #include "Logfile.h"
 #include "Mauspfeil.h"
+#include "TimerManager.h"
 
 
 
@@ -29,6 +30,7 @@ StatePauseTheGame::~StatePauseTheGame()
 void StatePauseTheGame::start( f32 frameDeltaTime )
 {
     (void)frameDeltaTime; // game state does no real-time graphics on startup
+    TimerManager::getInstance().pause();
     transitTo( RUNNING );
 }
 
@@ -49,6 +51,7 @@ void StatePauseTheGame::update( f32 frameDeltaTime )
 void StatePauseTheGame::shutdown( f32 frameDeltaTime )
 {
     (void)frameDeltaTime; // game state does no real-time graphics on shutdown
+    TimerManager::getInstance().resume();
     transitTo( STOPPED );
 }
 
