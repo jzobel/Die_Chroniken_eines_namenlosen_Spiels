@@ -51,10 +51,10 @@ void TimerManager::resume()
 
 
 
-void TimerManager::tick( const f32 frameDeltaTime )
+void TimerManager::tick( const f32 seconds )
 {
     for( itr_ = timerList_.begin(); itr_ != timerList_.end(); ++itr_ )
-        (*itr_)->tick( frameDeltaTime );
+        (*itr_)->tick( seconds );
 }
 
 

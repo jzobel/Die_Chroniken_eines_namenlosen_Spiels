@@ -55,11 +55,11 @@ public:
      */
     void resume();
 
-    /*! \brief Erhöht alle von TimeManager verwalteten Timer um die seit dem letzten Tick vergangene Zeit.
-     *  \param frameDeltaTime (\a const \a f32) Zeitwert in Sekunden
+    /*! \brief Erhöht alle von TimeManager verwalteten Timer, idealer Weise um die seit dem letzten Tick vergangene Zeit.
+     *  \param seconds (\a const \a f32) Zeitwert in Sekunden
      *  \return -
      */
-    void tick( const f32 frameDeltaTime );
+    void tick( const f32 seconds );
 
 private:
 
