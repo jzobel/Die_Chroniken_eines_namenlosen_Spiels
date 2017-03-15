@@ -9,8 +9,9 @@
 // - enum values are allowed (only /[\w_]/)
 // - boolean values are `true` and `false`
 // - float values may not have leading zeroes, and must have a `.` in them
-// - class should get and parse content only once, store pairs temporarily in a map/dict
-// - test many erroneous config files, class should log and exit
+// - test many erroneous config files, class should (log and exit | self repair)???
+// - if no file exists, one is written with defaults.
+// - hint: can we use regexp in the algo?
 
 TEST_CASE( "Configuration: read from file" ) {
     const irr::io::path configFileName = "testconfigfile.ini";
